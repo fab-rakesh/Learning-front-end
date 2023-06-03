@@ -6,7 +6,9 @@ myHtml.onclick = e => {
     if (clickedElementName == "LI") {
         // change list item
         let newListItem = prompt("Change List item.");
-        clickedElement.innerHTML = newListItem;
+        if(newListItem) {
+            clickedElement.innerHTML = newListItem;
+        }
         // clickedElement.createTextNode(newListItem);
     } else {
         // add list item
