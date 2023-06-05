@@ -22,9 +22,15 @@ if (userName) displayName(userName);
 else displayName(storeName(askName()));
 
 // change name
-document.querySelector("button").onclick = () => {
+document.querySelector("#button>:first-child").onclick = () => {
   const userName = prompt("Please enter your name");
   if (userName) displayName(userName);
+};
+
+// remove name
+document.querySelector("#button>:last-child").onclick = () => {
+  localStorage.removeItem("name");
+  document.querySelector("h1").textContent = "I'm Cool";
 };
 
 // change image
