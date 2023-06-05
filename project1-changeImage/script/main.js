@@ -1,5 +1,5 @@
 function displayName(userName) {
-  document.querySelector("h1").textContent = "I'm cool, " + userName;
+  document.querySelector("h1").textContent = `I'm cool, ${userName}`;
 }
 
 function removeName() {
@@ -13,12 +13,9 @@ function storeName(userName) {
 }
 
 function askName() {
-  let userName;
-  do {
-    userName = prompt("Pleae enter your name");
-  } while (userName === null);
-
-  return userName;
+  const userName = prompt("Pleae enter your name");
+  if (!userName) askName();
+  else return userName;
 }
 
 // display name
@@ -28,8 +25,7 @@ else displayName(storeName(askName()));
 
 // change name
 document.querySelector("#button>:first-child").onclick = () => {
-  const userName = prompt("Please enter your name");
-  if (userName) displayName(userName);
+  displayName(storeName(askName()));
 };
 
 // remove name
