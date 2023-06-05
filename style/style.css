@@ -1,3 +1,55 @@
-p {
-  color: red;
+html {
+  font-size: 10px;
+  font-family: "Open Sans", sans-serif;
+  background-color: #00539f;
+}
+
+body {
+  width: 600px;
+  margin: 0 auto; /*center the body by setting left & right to auto*/
+  background-color: #ff9500;
+  padding: 0 20px 20px 20px;
+  border: 5px solid black;
+}
+
+h1 {
+  font-size: 60px;
+  text-align: center;
+  margin: 0;
+  color: #00539f;
+  padding: 20px 0;
+  text-shadow: 3px 3px 10px rgb(41, 40, 40);
+}
+
+p,
+li {
+  font-size: 16px;
+  line-height: 2; /*space between lines*/
+  letter-spacing: 1px; /*space between letters*/
+  color: #302f2f;
+}
+
+img {
+  width: 500px;
+  height: 280px;
+  display: block; /* by default images are inline, in order to center it we made it block*/
+  margin: 0 auto; /* center the image*/
+}
+
+button {
+  display: block;
+  margin: 0 auto;
+  font-size: 20px;
+  font-weight: 700;
+  padding: 10px 20px;
+  background-color: #00bc38;
+  color: white;
+  border: 1px solid white;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: white;
+  color: #00bc38;
+  border: 1px solid #00bc38;
 }
