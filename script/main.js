@@ -2,6 +2,11 @@ function displayName(userName) {
   document.querySelector("h1").textContent = "I'm cool, " + userName;
 }
 
+function removeName() {
+  localStorage.removeItem("name");
+  document.querySelector("h1").textContent = "I'm Cool";
+}
+
 function storeName(userName) {
   localStorage.setItem("name", userName);
   return userName;
@@ -29,8 +34,7 @@ document.querySelector("#button>:first-child").onclick = () => {
 
 // remove name
 document.querySelector("#button>:last-child").onclick = () => {
-  localStorage.removeItem("name");
-  document.querySelector("h1").textContent = "I'm Cool";
+  removeName();
 };
 
 // change image
